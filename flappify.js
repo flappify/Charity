@@ -9,9 +9,9 @@ function pay(){
         var options = {
             "key": "rzp_test_RDEf4OFlF6k0Jw",
             "amount": amount*100, // Example: 2000 paise = INR 20
-            "name": "FLAPPIFY",
+            "name": "PARKLANE ASTITVA",
             "description": "Donation",
-            "image": "img/logo.png",// COMPANY LOGO
+            "image": "logo/logo.png",// COMPANY LOGO
             "handler": function (response) {
                 console.log("success");
                 $("#payCheck").trigger("reset");
