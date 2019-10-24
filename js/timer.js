@@ -10,7 +10,7 @@
         day = hour * 24;
   
   let countDown = new Date('Sep 30, 2020 00:00:00').getTime(),
-      x = setInterval(function() {
+      x = setInterval(function(){
   
       let now = new Date().getTime(),
       distance = countDown - now;

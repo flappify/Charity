@@ -1,6 +1,8 @@
 <?php
 
-    $to = "creative.flappify@gmail.com";
+    function contact(){
+		if(isset($_GET['contact-btn'])){
+			$to = "creative.flappify@gmail.com";
     $from = $_GET['email'];
     $name = $_GET['name'];
     $subject = $_GET['subject'];
@@ -32,5 +34,14 @@
 	$body .= "</body></html>";
 
     $send = mail($to, $subject, $body, $headers);
-
+			
+			if($send)
+				{
+					echo '<script>alert("SEND")</script>';
+				}
+			else{
+				echo '<script>alert("Error")</script>';
+			}
+		}
+	}
 ?>

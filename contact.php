@@ -1,3 +1,6 @@
+<?php
+  include("contact_process.php");
+?>
 <!doctype html>
 <html lang="en">
 
@@ -92,8 +95,9 @@
           <h2 class="contact-title">Get in Touch</h2>
         </div>
         <div class="col-lg-8">
-          <form class="form-contact contact_form" action="contact_process.php" method="GET" id="contactForm"
+          <form class="form-contact contact_form" action="contact.php" method="GET" id="contactForm"
             novalidate="novalidate">
+            <?php contact(); ?>
             <div class="row">
               <div class="col-12">
                 <div class="form-group">
@@ -123,8 +127,7 @@
               </div>
             </div>
             <div class="form-group mt-3">
-              <button type="submit" class="btn_3">Send Message <i
-                  class="flaticon-right-arrow"></i> </button>
+              <input type="submit" class="btn_3" value="Send Message" name="contact-btn"/>
             </div>
           </form>
         </div>
