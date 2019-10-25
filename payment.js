@@ -45,7 +45,7 @@ function pay(){
                 state.value="";
                 zip.value="";
                 amount.value="";
-                document.getElementById('success').style.display = 'block';
+                document.getElementById('success').style.display = 'flex';
                 setTimeout(function(){
                     document.getElementById('success').style.display = 'none';
                 },8000);

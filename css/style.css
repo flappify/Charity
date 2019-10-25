@@ -2100,9 +2100,8 @@ input:-internal-autofill-selected {
 @media (max-width: 576px) {
   /* line 11, ../../01 cl html template/03_jun 2019/183_Charity_html/sass/_menu.scss */
   .main_menu .navbar-brand img{
-    height: 12vh;
     margin:0;
-    width: 48vw;
+    width: 50vw;
   }
 }
 
@@ -4111,7 +4110,7 @@ input:-internal-autofill-selected {
 /**************** intro_video css start ****************/
 /* line 2, ../../01 cl html template/03_jun 2019/183_Charity_html/sass/_intro_video_bg.scss */
 .intro_video_bg {
-  background-image: url("../img/intro_video_bg.png");
+  background-image: url("https://storage.needpix.com/rsynced_images/kids-2408614_1280.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6793,7 +6792,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 1, ../../01 cl html template/03_jun 2019/183_Charity_html/sass/_breadcrumb.scss */
 .breadcrumb_bg {
-  background-image: url("../img/breadcum_bg.png");
+  background-image: url("https://images.pexels.com/photos/262211/pexels-photo-262211.jpeg?cs=srgb&dl=boy-children-of-war-children-without-childhood-262211.jpg&fm=jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

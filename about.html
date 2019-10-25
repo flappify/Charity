@@ -43,9 +43,13 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span>
+    </div>
     <!--::header part start::-->
     <header class="main_menu home_menu">
         <div class="container">
@@ -105,7 +109,7 @@
     <!-- about part end-->
     <section class="about_us padding_top">
         <div class="container">
-            <div class="row justify-content-between align-items-center">
+            <div class="row justify-content-between align-items-center animated bounceInUp">
                 <div class="col-lg-6">
                     <div class="about_us_img">
                         <img src="img/top_service.png" alt="">
@@ -244,19 +248,9 @@
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div>
                         <div class="copyright_text">
                             <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> ParkLaneAstitva All rights reserved | This website is developed and maintained with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://flappify.com/" target="_blank">Flappify</a></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="footer_icon social_icon">
-                            <ul class="list-unstyled">
-                                <li><a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
-                                <li><a href="#" class="single_social_icon"><i class="fab fa-behance"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -267,6 +261,7 @@
     <!-- jquery plugins here-->
 
     <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/loader.js"></script>
     <!-- popper js -->
     <script src="js/popper.min.js"></script>
     <!-- bootstrap js -->

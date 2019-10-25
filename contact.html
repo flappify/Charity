@@ -43,6 +43,7 @@
   <link rel="stylesheet" href="css/slick.css">
   <!-- style CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loader.css">
   <style>
   
 .helpdesk{
@@ -158,6 +159,9 @@
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span>
+    </div>
   <!--::header part start::-->
   <header class="main_menu home_menu">
     <div class="container">
@@ -213,7 +217,7 @@
   <!-- breadcrumb start-->
 
   <!-- ================ contact section start ================= -->
-  <div class="helpdesk">
+  <div class="helpdesk animated bounceInLeft">
           <form id="contact" name="contact" onsubmit="return validateFormOnSubmit(this)" onKeyPress="if (event.which == 13) return false;" action="" method="GET">
               <div class="form-items">
                   <p>Full name</p>
@@ -317,18 +321,8 @@
             <hr>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="copyright_text">
+                    <div>
                         <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> ParkLaneAstitva All rights reserved | This website is developed and maintained with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://flappify.com/" target="_blank">Flappify</a></p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="footer_icon social_icon">
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
-                            <li><a href="#" class="single_social_icon"><i class="fab fa-behance"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -341,6 +335,7 @@
   <!-- jquery plugins here-->
 
   <script src="js/jquery-1.12.1.min.js"></script>
+  <script src="js/loader.js"></script>
   <!-- popper js -->
   <script src="js/popper.min.js"></script>
   <!-- bootstrap js -->
