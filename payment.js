@@ -278,7 +278,15 @@ function validateAmount(amount) {
             amount.style.outline = "";
             document.getElementById('amount-error').innerHTML = "";
         },5000);
-    } else {
+    } else if (amount.value>500000){
+        error = error + 1;
+          document.getElementById('amount-error').innerHTML = "Maximum Donation amount is 5,00,000";
+          amount.style.outline = "2px solid #ff9f9f";
+          setTimeout(function(){
+              amount.style.outline = "";
+              document.getElementById('amount-error').innerHTML = "";
+          },5000);
+      } else {
         amount.style.outline = '0';
         document.getElementById('amount-error').innerHTML = '';
     }

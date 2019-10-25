@@ -2094,25 +2094,21 @@ input:-internal-autofill-selected {
   padding: 0rem !important;
 }
 .main_menu .navbar-brand img{
-  height: 15vh;
-  margin:10px;
+  width: 20vw;
+  margin:10px 0;
 }
 @media (max-width: 576px) {
   /* line 11, ../../01 cl html template/03_jun 2019/183_Charity_html/sass/_menu.scss */
-  .main_menu .navbar-brand {
-    max-width: 120px;
-  }
   .main_menu .navbar-brand img{
     height: 12vh;
-    margin:0px;
+    margin:0;
+    width: 48vw;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 11, ../../01 cl html template/03_jun 2019/183_Charity_html/sass/_menu.scss */
-  .main_menu .navbar-brand {
-    max-width: 130px;
-  }
+  
 }
 
 /* line 23, ../../01 cl html template/03_jun 2019/183_Charity_html/sass/_menu.scss */

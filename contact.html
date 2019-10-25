@@ -43,6 +43,118 @@
   <link rel="stylesheet" href="css/slick.css">
   <!-- style CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <style>
+  
+.helpdesk{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.helpdesk.form-items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.helpdesk .form-items p{
+    font-size: 1.2rem;
+    color: #868686;
+    text-align: left;
+    margin: 10px 0;
+}
+.helpdesk .form-items p i{
+    margin: 0 10px;
+}
+
+.helpdesk .form-items input{
+    width: 40rem;
+    height: 3.5rem;
+    border: 0;
+    background-color: #fcefff;
+    border-radius: 2px;
+    outline-color: #f9dfff;
+    padding: 15px;
+    color: #5a5a5a;
+    font-size: 1.8rem;
+    caret-color: #b10cd7;
+}
+
+.helpdesk .form-items textarea{
+    width: 30rem;
+    height: 10rem;
+    border: 0;
+    background-color: #fcefff;
+    border-radius: 2px;
+    outline-color: #f9dfff;
+    resize: none;
+    padding: 15px 15px;
+    color: #5a5a5a;
+    font-size: 1.2rem;
+    caret-color: #b10cd7;
+}
+
+.helpdesk button{
+    color: #fff;
+    border: 0;
+    padding: 1rem 1.2rem;
+    background-color: #a82bf6;
+    font-size: 1rem;
+    border-radius: 3px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.helpdesk button i{
+    margin: 0 10px 0 10px;
+    font-size: 1.2rem;
+}
+
+.error{
+    font-size: 12px;
+    color: #ff9f9f;
+    margin-top: 5px;
+}
+.alert {
+    margin-top: 1em;
+    padding: 1.2rem;
+    background: #f9dfff;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #b913da;
+    border-radius: 2.5px;
+    display: none;
+}
+
+@media screen and (max-width:680px)
+{
+    .helpdesk h1{
+        font-size: 2rem;
+    }
+    .helpdesk .form-items input{
+        width: 20rem;
+        height: 3.5rem;
+        font-size: 1.3rem;
+    }
+    .helpdesk .form-items textarea{
+        width: 20rem;
+    }
+    .helpdesk button{
+        color: #fff;
+        border: 0;
+        padding: 1.2rem 1.2rem;
+        background-color: #3bbc80;
+        font-size: 1.2rem;
+        border-radius: 3px;
+        margin-top: 30px;
+    }
+}
+  </style>
 </head>
 
 <body>
@@ -101,75 +213,32 @@
   <!-- breadcrumb start-->
 
   <!-- ================ contact section start ================= -->
-  <section class="contact-section section_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="contact-title">Get in Touch</h2>
-        </div>
-        <div class="col-lg-8">
-          <form class="form-contact contact_form" action="" method="GET" id="contactForm"
-            novalidate="novalidate">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group">
-
-                  <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9"
-                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"
-                    placeholder='Enter Message'></textarea>
-                </div>
+  <div class="helpdesk">
+          <form id="contact" name="contact" onsubmit="return validateFormOnSubmit(this)" onKeyPress="if (event.which == 13) return false;" action="" method="GET">
+              <div class="form-items">
+                  <p>Full name</p>
+                  <input type="text" class="input-item" name="name" id="name" tabindex="1"/>
+                  <div id="name-error" class="error"></div>
               </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter your name'" placeholder='Enter your name'>
-                </div>
+              <div class="form-items">
+                  <p>Email address</p>
+                  <input type="email" class="input-item" name="email" id="email" tabindex="2"/>
+                  <div id="email-error" class="error"></div>
               </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter email address'" placeholder='Enter email address'>
-                </div>
+              <div class="form-items">
+                  <p>Mobile no.</p>
+                  <input type="text" class="input-item" name="phone" id="phone" tabindex="3"/>
+                  <div id="phone-error" class="error"></div>
               </div>
-              <div class="col-12">
-                <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter Subject'" placeholder='Enter Subject'>
-                </div>
+              <div class="form-items">
+                  <p>Message<i class="fas fa-link"></i></p>
+                  <textarea class="input-item" name="message" id="message" tabindex="4"  maxlength="100"></textarea>
+                  <div id="message-error" class="error"></div>
               </div>
-            </div>
-            <div class="form-group mt-3">
-              <button type="submit" class="btn_3">Send Message <i
-                class="flaticon-right-arrow"></i> </button>
-            </div>
+              <button type="submit" name="submit" id="submit" tabindex="5">Send<i class="fas fa-paper-plane"></i></button>
           </form>
-        </div>
-        <div class="col-lg-4">
-          <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-home"></i></span>
-            <div class="media-body">
-              <h3>Buttonwood, California.</h3>
-              <p>Rosemead, CA 91770</p>
-            </div>
-          </div>
-          <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-            <div class="media-body">
-              <h3>00 (440) 9865 562</h3>
-              <p>Mon to Fri 9am to 6pm</p>
-            </div>
-          </div>
-          <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-email"></i></span>
-            <div class="media-body">
-              <h3>support@colorlib.com</h3>
-              <p>Send us your query anytime!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          <div class="alert">Your message has been sent!</div>
+  </div>
   <!-- ================ contact section end ================= -->
 
   <!--::footer_part start::-->
@@ -266,7 +335,9 @@
     </div>
 </footer>
   <!--::footer_part end::-->
-
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
   <!-- jquery plugins here-->
 
   <script src="js/jquery-1.12.1.min.js"></script>
@@ -291,13 +362,9 @@
   <script src="js/waypoints.min.js"></script>
   <script src="js/countdown.jquery.min.js"></script>
   <!-- contact js -->
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/jquery.form.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/mail-script.js"></script>
-  <script src="js/contact.js"></script>
+  
   <!-- custom js -->
-  <script src="js/custom.js"></script>
+  <script src="contact.js"></script>
 </body>
 
 </html>
