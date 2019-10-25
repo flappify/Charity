@@ -9,7 +9,7 @@
         hour = minute * 60,
         day = hour * 24;
   
-  let countDown = new Date('Sep 30, 2020 00:00:00').getTime(),
+  let countDown = new Date('Aug 10, 2019 16:00:00').getTime(),
       x = setInterval(function(){
   
       let now = new Date().getTime(),
@@ -27,7 +27,7 @@
         hour = minute * 60,
         day = hour * 24;
   
-  let countDown = new Date('Sep 10, 2020 00:00:00').getTime(),
+  let countDown = new Date('Sep 15, 2019 00:00:00').getTime(),
       x = setInterval(function() {
   
       let now = new Date().getTime(),
@@ -45,7 +45,7 @@
         hour = minute * 60,
         day = hour * 24;
   
-  let countDown = new Date('Sep 20, 2020 00:00:00').getTime(),
+  let countDown = new Date('Apr 25, 2019 00:00:00').getTime(),
       x = setInterval(function() {
   
       let now = new Date().getTime(),
@@ -63,7 +63,7 @@
         hour = minute * 60,
         day = hour * 24;
   
-  let countDown = new Date('Sep 15, 2020 00:00:00').getTime(),
+  let countDown = new Date('Dec 25, 2018 00:00:00').getTime(),
       x = setInterval(function() {
   
       let now = new Date().getTime(),
