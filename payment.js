@@ -30,7 +30,7 @@ function pay(){
         document.getElementById('pay-btn').style.display="none";
         document.getElementById('load-btn').style.display="block";
         var options = {
-            "key": "rzp_live_fILY6C0skv6hNH",
+            "key": "rzp_live_uwPxWwkcmKhadl",
             "amount": amount.value*100, // Example: 2000 paise = INR 20
             "name": "PARKLANE ASTITVA",
             "description": "Donation",
